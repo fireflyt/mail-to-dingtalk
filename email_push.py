@@ -3,7 +3,7 @@
 """
 腾讯企业邮箱 → 钉钉机器人推送
 作者: Kubecc
-版本: v1.2 (添加日志记录功能)
+版本: v0.1 
 """
 import imaplib
 import email
