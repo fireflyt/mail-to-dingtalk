@@ -32,36 +32,25 @@ pip install requests html2text
 
 * IMAP_HOST = "imap.exmail.qq.com"
 * EMAIL_USER = "xxx"        # 企业邮箱账号
-EMAIL_PASS = "xxx"        # 企业邮箱密码（或授权码）
-SENDER_FILTER = "system@notice.aliyun.com"  # 指定发件人
-DING_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=xxx"
-DING_SECRET = ""  # 如果开启了加签，请填写密钥，否则留空
-CHECK_INTERVAL = 10       # 检查间隔秒数
-LOG_LEVEL = logging.INFO  # 日志级别: DEBUG, INFO, WARNING, ERROR, CRITICAL
+* EMAIL_PASS = "xxx"        # 企业邮箱密码（或授权码）
+* SENDER_FILTER = "system@notice.aliyun.com"  # 指定发件人
+* DING_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=xxx"
+* DING_SECRET = ""  # 如果开启了加签，请填写密钥，否则留空
+* CHECK_INTERVAL = 10       # 检查间隔秒数
+* LOG_LEVEL = logging.INFO  # 日志级别: DEBUG, INFO, WARNING, ERROR, CRITICAL
 
-说明：
-
-EMAIL_USER / EMAIL_PASS：腾讯企业邮箱账号和密码（推荐使用授权码）。
-
-SENDER_FILTER：只处理该邮箱地址的邮件。
-
-DING_WEBHOOK：钉钉群机器人 Webhook 地址。
-
-DING_SECRET：如果钉钉机器人开启了 加签 安全设置，请填写密钥。
-
-CHECK_INTERVAL：多久检查一次邮件。
-
-LOG_LEVEL：日志等级，开发调试时建议改为 DEBUG。
 ### 4. 运行程序
+```bash
 python mail_to_ding.py
-日志会输出到控制台，并保存在 logs/ 目录下，例如：
-logs/mail_to_ding_20250910.log
-日志示例：
+```
+* 日志会输出到控制台，并保存在 logs/ 目录下，例如：logs/mail_to_ding_20250910.log
+* 日志示例：
 2025-09-10 10:23:45 - INFO - 启动腾讯企业邮箱 → 钉钉推送服务
 2025-09-10 10:23:45 - INFO - 监控发件人: system@notice.aliyun.com
 2025-09-10 10:23:55 - INFO - 找到 1 封未读邮件，开始处理...
 2025-09-10 10:23:55 - INFO - 推送成功: 阿里云告警通知
 2025-09-10 10:23:55 - INFO - 邮件处理完成并标记为已读: 阿里云告警通知
+  
 ### 5. 适用场景
 
 监控阿里云、腾讯云等系统通知邮件
