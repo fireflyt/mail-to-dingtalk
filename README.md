@@ -25,20 +25,20 @@ git clone https://github.com/fireflyt/mail-to-dingtalk.git
 cd mail-to-dingtalk
 ```
 ### 2. 安装依赖
+```bash
 pip install requests html2text
+```
 ### 3. 修改配置
-# ---------------- 配置区域 ----------------
-IMAP_HOST = "imap.exmail.qq.com"
-EMAIL_USER = "xxx"        # 企业邮箱账号
+
+* IMAP_HOST = "imap.exmail.qq.com"
+* EMAIL_USER = "xxx"        # 企业邮箱账号
 EMAIL_PASS = "xxx"        # 企业邮箱密码（或授权码）
 SENDER_FILTER = "system@notice.aliyun.com"  # 指定发件人
-
 DING_WEBHOOK = "https://oapi.dingtalk.com/robot/send?access_token=xxx"
 DING_SECRET = ""  # 如果开启了加签，请填写密钥，否则留空
-
 CHECK_INTERVAL = 10       # 检查间隔秒数
 LOG_LEVEL = logging.INFO  # 日志级别: DEBUG, INFO, WARNING, ERROR, CRITICAL
-# ------------------------------------------
+
 说明：
 
 EMAIL_USER / EMAIL_PASS：腾讯企业邮箱账号和密码（推荐使用授权码）。
