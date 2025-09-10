@@ -23,6 +23,7 @@
 ```bash
 git clone https://github.com/fireflyt/mail-to-dingtalk.git
 cd mail-to-dingtalk
+```
 ### 2. 安装依赖
 pip install requests html2text
 ### 3. 修改配置
