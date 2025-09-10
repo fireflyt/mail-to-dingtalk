@@ -1,1 +1,25 @@
-# AlibabaCloud-Email-Push-Assistant
+# Mail to DingTalk Bot
+
+**腾讯企业邮箱 → 钉钉机器人推送工具**
+
+本工具用于定时检查指定发件人的邮件，并将邮件内容（主题、发件人、收件人、时间、正文）推送到钉钉群机器人，支持 **HTML 转 Markdown**，并提供日志记录功能。
+
+---
+
+## 功能特性
+
+- ✅ 连接 **腾讯企业邮箱 IMAP**，自动检查未读邮件  
+- ✅ 仅推送来自指定发件人的邮件（精确匹配邮箱地址）  
+- ✅ 自动解析邮件主题、正文（优先 HTML → 转 Markdown）  
+- ✅ 支持 **钉钉机器人加签安全设置**  
+- ✅ 日志功能（文件 + 控制台），按日期存储  
+- ✅ 自动标记已读，避免重复推送  
+- ✅ 定时轮询，默认间隔 10 秒  
+
+---
+## 使用方法
+
+### 1. 克隆项目
+```bash
+git clone https://github.com/fireflyt/mail-to-dingtalk.git
+cd mail-to-dingtalk
