@@ -1,0 +1,9 @@
+docker run -d \
+  --name email-monitor \
+  -e EMAIL_USER="" \
+  -e EMAIL_PASS="" \
+  -e SENDER_FILTER="system@notice.aliyun.com" \
+  -e DING_WEBHOOK="https://oapi.dingtalk.com/robot/send?access_token=xxx" \
+  -e DING_SECRET="" \
+  -v email-logs:/app/logs \
+  mail-to-dingding:v0.1
